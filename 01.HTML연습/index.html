@@ -12,10 +12,68 @@
     <meta name="viewport" content="width-device-width, initial-scale=0.1">
 
     <title>네이버요약뉴스-메인</title>
+    <style>
+        /* 스타일시트 영역에 CSS를 쓰면 : 인터널 방식 */
+        /* 
+        스타일시트 사용법 :
+        선택자{
+        속성:값;
+        속성:값;
+        }
+         */
+
+         /* 1. 상단영역 */
+         .header{
+            /* 배경색 */
+            background-color: #d0ff4f;
+            /* 가로크기 */
+            width: 1280px;
+            /* 블록요소 마진으로 가로중앙설정 : 마영오!(마진영오토)
+            양쪽 마진이 auto이면 중앙에 옴 */
+            margin: 0 auto;
+            /* 
+         [마진셋팅법]
+         margin: 값; - 사방세팅 
+         margin: 값 값; - 위아리 양쪽세팅
+         margin: 값 값 값; - 위 양쪽 아래세팅 
+         margin: 값 값 값 값; - 각 방향뱔 세팅 
+         */
+        }
+
+        /* 타이틀 */
+        #main-title{
+            font-size: 40px;
+    color: #4523dd;
+    margin: 0;
+        }
+        
+
+        /* 메뉴박스 */
+        .header ul{
+            /* 블릿없앰 (lin) */
+            list-style-type: none;
+            /* float:left 를 사용했으므로
+            자식요소 넘치는 것 숨기기 사용 */
+            overflow: hidden;
+            /* 가로크기 */
+            width: 500px;
+            /* 마영오 */
+            margin: 0 auto
+        }
+        /* 메뉴리스트 */
+        .header ul li{
+            /* 블록요소 옆으로 흐르기 
+            float은 흘러가게 설정하는 속성
+            값으로 left : 나는 왼쪽에 너는 오른쪽으로 흘러가라 */
+            float: left;
+        }
+        
+    </style>
 </head>
 <body>
     <!-- 1.상단영역 -->
-     <div class="header">
+     <div class="header" style="text-align: center;">
+        <!-- 태그안에 stlye속성으로 지정하는 방법 : 인라인형식 -->
         <h1 class="main-title">네이버요약뉴스</h1>
         <ul>
             <li>경제</li>
