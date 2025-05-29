@@ -24,20 +24,21 @@
 
          /* 1. 상단영역 */
          .header{
-            /* 배경색 */
-            background-color: #d0ff4f;
-            /* 가로크기 */
-            width: 1280px;
-            /* 블록요소 마진으로 가로중앙설정 : 마영오!(마진영오토)
-            양쪽 마진이 auto이면 중앙에 옴 */
-            margin: 0 auto;
-            /* 
-         [마진셋팅법]
-         margin: 값; - 사방세팅 
-         margin: 값 값; - 위아리 양쪽세팅
-         margin: 값 값 값; - 위 양쪽 아래세팅 
-         margin: 값 값 값 값; - 각 방향뱔 세팅 
-         */
+             /* 배경색 */
+             background-color: #d0ff4f;
+             /* 가로크기 */
+             width: 1280px;
+             /* 블록요소 마진으로 가로중앙설정 : 마영오!(마진영오토)
+             양쪽 마진이 auto이면 중앙에 옴 */
+             margin: 0 auto;
+             /* 
+             [마진셋팅법]
+             margin: 값; - 사방세팅 
+             margin: 값 값; - 위아리 양쪽세팅
+             margin: 값 값 값; - 위 양쪽 아래세팅 
+             margin: 값 값 값 값; - 각 방향뱔 세팅 
+             */
+             padding: 9px;
         }
 
         /* 타이틀 */
@@ -58,7 +59,9 @@
             /* 가로크기 */
             width: 500px;
             /* 마영오 */
-            margin: 0 auto
+            margin: 0 auto;
+            /* 패딩 */
+            padding: 0;
         }
         /* 메뉴리스트 */
         .header ul li{
@@ -66,6 +69,11 @@
             float은 흘러가게 설정하는 속성
             값으로 left : 나는 왼쪽에 너는 오른쪽으로 흘러가라 */
             float: left;
+
+            /* 글자크기 */
+            font-size: 20px;
+            /* 패딩 : 위아래0 양쪽 00px */
+             padding: 0px 33px;
         }
         
     </style>
