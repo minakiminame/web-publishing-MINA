@@ -12,6 +12,8 @@
     <meta name="viewport" content="width-device-width, initial-scale=0.1">
 
     <title>네이버요약뉴스-메인</title>
+    <!-- 외부 CSS 불러오기 : 익스터널 방식  -->
+     <link rel="stylesheet" href="./css/common.css">
     <style>
         /* 스타일시트 영역에 CSS를 쓰면 : 인터널 방식 */
         /* 
@@ -22,83 +24,37 @@
         }
          */
 
-         /* 1. 상단영역 */
-         .header{
-             /* 배경색 */
-             background-color: #d0ff4f;
-             /* 가로크기 */
-             width: 1280px;
-             /* 블록요소 마진으로 가로중앙설정 : 마영오!(마진영오토)
-             양쪽 마진이 auto이면 중앙에 옴 */
-             margin: 0 auto;
-             /* 
-             [마진셋팅법]
-             margin: 값; - 사방세팅 
-             margin: 값 값; - 위아리 양쪽세팅
-             margin: 값 값 값; - 위 양쪽 아래세팅 
-             margin: 값 값 값 값; - 각 방향뱔 세팅 
-             */
-             padding: 9px;
-        }
-
-        /* 타이틀 */
-        #main-title{
-            font-size: 40px;
-    color: #4523dd;
-    margin: 0;
-        }
-        
-
-        /* 메뉴박스 */
-        .header ul{
-            /* 블릿없앰 (lin) */
-            list-style-type: none;
-            /* float:left 를 사용했으므로
-            자식요소 넘치는 것 숨기기 사용 */
-            overflow: hidden;
-            /* 가로크기 */
-            width: 500px;
-            /* 마영오 */
-            margin: 0 auto;
-            /* 패딩 */
-            padding: 0;
-        }
-        /* 메뉴리스트 */
-        .header ul li{
-            /* 블록요소 옆으로 흐르기 
-            float은 흘러가게 설정하는 속성
-            값으로 left : 나는 왼쪽에 너는 오른쪽으로 흘러가라 */
-            float: left;
-
-            /* 글자크기 */
-            font-size: 20px;
-            /* 패딩 : 위아래0 양쪽 00px */
-             padding: 0px 33px;
-        }
         
     </style>
 </head>
 <body>
     <!-- 1.상단영역 -->
-     <div class="header" style="text-align: center;">
+     <header class="header" style="text-align: center;">
         <!-- 태그안에 stlye속성으로 지정하는 방법 : 인라인형식 -->
         <h1 class="main-title">네이버요약뉴스</h1>
         <ul>
-            <li>경제</li>
-            <li>사회</li>
-            <li>IT/과학</li>
-            <li>TV/연예</li>
+            <li>
+                <a href="./index.html"><img id="main-logo" src="./image/naver_logo.png" alt="네이버 로고"></a>
+            </li>
+            <li><a href="./sub1.html">경제</a></li>
+            <li><a href="./sub2.html">사회</a></li>
+            <li><a href="./sub3.html">IT/과학</a></li>
+            <li><a href="./sub4.html">TV/연예</a></li> 
         </ul>
-     </div>
+     </header>
      <!-- 2.메인영역 -->
-      <div class="main">
+      <main class="main">
         <img src="./image/ -2.jpg" alt="뉴스메인이미지" />
-      </div>
+      </main>
       <!-- 3.하단영역 -->
-       <divc class="footer">
+       <footer class="footer">
+        <!-- address요소 : 주소, 이름 등 정보 -->
         <address>
-            서울시 강남구 역삼동 119 대호B 8F 대표:Tom 전화:010-0000-0000
+            서울시 강남구 역삼동 119 대호B 8F <br>
+            <!-- br요소 : 줄바꿈 -->
+            대표:Tom <br>
+            전화:010-0000-0000
         </address>
-       </div>
+       </footer>
 </body>
 </html>

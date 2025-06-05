@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/* @charset은 css문서의 문자형식을 지정하는 코드. UTF-8은 2byte문자를 처리하는 방식임 */
+
+/* Info PJ 공통 CSS - common.css */
+
+/* 1. 상단영역 */
+.header {
+  /* 배경색 */
+  background-color: #d0ff4f;
+  /* 가로크기 */
+  width: 1280px;
+  /* 블록요소 마진으로 가로중앙설정 : 마영오!(마진영오토)
+             양쪽 마진이 auto이면 중앙에 옴 */
+  margin: 0 auto;
+  /* 
+             [마진셋팅법]
+             margin: 값; - 사방세팅 
+             margin: 값 값; - 위아리 양쪽세팅
+             margin: 값 값 값; - 위 양쪽 아래세팅 
+             margin: 값 값 값 값; - 각 방향뱔 세팅 
+             */
+  padding: 9px;
+  /* 박스에 크기가 1280px인데, 여기 padding을 주면 padding 만큼 박스가 커짐.
+             따라서 1280px에 맞추려면 padding만큼 뺴야한다.
+             그런데 패딩을 안쪽으로 생성해주는 속상이 있는데 > box-sizing 이다. */
+  box-sizing: border-box;
+
+  /* 값으로 border-box 라고 주면 패딩과 보더가 모두 포함된 박스로 설정됨 */
+
+  /* border(경계선) : 두께 종류 색상 */
+  border: 10px dotted #ff004c;
+  /* 하단마진 덮어쓰기 */
+  margin-bottom: 20px;
+}
+
+/* 타이틀 */
+#main-title {
+  font-size: 40px;
+  color: #4523dd;
+  margin: 0;
+}
+
+/* 메뉴박스 */
+.header ul {
+  /* 블릿없앰 (lin) */
+  list-style-type: none;
+  /* float:left 를 사용했으므로
+            자식요소 넘치는 것 숨기기 사용 */
+  overflow: hidden;
+  /* 가로크기 */
+  width: 565px;
+  /* 마영오 */
+  margin: 0 auto;
+  /* 패딩 */
+  padding: 0;
+}
+/* 메인로고 */
+#main-logo{
+    width: 45px;
+}
+/* 메뉴리스트 */
+.header ul li {
+  /* 블록요소 옆으로 흐르기 
+            float은 흘러가게 설정하는 속성
+            값으로 left : 나는 왼쪽에 너는 오른쪽으로 흘러가라 */
+  float: left;
+
+  /* 글자크기 */
+  font-size: 20px;
+  /* 패딩 : 위아래0 양쪽 00px */
+  padding: 0px 33px;
+}
+
+/* 2.메인영역 */
+.main {
+  /* 글자 정중앙(인라인요소 적용) */
+  text-align: center;
+  width: 1280px;
+  margin: 0 auto;
+}
+/* 메인이미지 */
+.main > img {
+  /* 박스에 이미지 크기 맞춤 */
+  width: 100%;
+}
+
+/* 3.하단영역 */
+.footer {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #ccc;
+  padding: 40px;
+  text-align: center;
+  /* 보더박스설정 */
+  box-sizing: border-box;
+  /* 상단마진 덮어쓰기 */
+  margin-top: 20px;
+}
+/* 하단 주소박스 */
+.footer address {
+  /* 글자크기 - font size (fz) */
+  font-size: 15px;
+  /* 글자이탤릭 - font style (fs)
+            값 : italic,normal  */
+  font-style: normal;
+}
