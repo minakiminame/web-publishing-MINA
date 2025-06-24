@@ -196,11 +196,24 @@ li+li : 앞에 li가 있는 li만 선택함 */
   /* 상단마진 덮어쓰기 */
   margin-top: 20px;
 }
+
 /* 하단 주소박스 */
 .footer address {
-  /* 글자크기 - font size (fz) */
-  font-size: 15px;
-  /* 글자이탤릭 - font style (fs)
-            값 : italic,normal  */
+  /* 글자크기 - font-size(fz숫자) */
+  font-size: 20px;
+  /* 글자이텔릭 - font-style(fs)
+        값: italic / normal */
   font-style: normal;
+}
+/* CEO이름 */
+span.ceo-name {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: darkgreen;
+}
+/* 회사전화번호 */
+span.tel-num {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    color: hotpink;
 }

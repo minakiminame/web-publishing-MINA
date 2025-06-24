@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+/* Robot PJ : 공통모듈 CSS - common.css */
+
+/************ 1. 상단영역 ************/
+/* 겉박스 */
+#top-area{
+    /* 고정포지션 적용하기 - fixed */
+    position: fixed;
+    /* 위치값을 안주면 젠틀하다! 그래서 줘야함! */
+    top: 0;
+    /* 크기를 안주면 가로값은 내용만큼만 늘어남 - 판타롱스타킹! */
+    width: 100%;
+    /* 맨위로 오도록 설정 */
+    z-index: 999;
+    /* 반투명 배경색 넣기 */
+    background-color: #01440091;
+}
+/* 속박스 */
+.top-area{
+    /* 플렉스 적용 - 직계자식요소가 적용됨! */
+    display: flex;
+    /* 플렉스 진행방향 정렬 : 양쪽끝정렬 */
+    justify-content: space-between;
+    /* 플렉스 진행방향의 수직정렬 - align-items : 중앙 */
+    align-items: center;
+    /* 최대가로크기 1200px에 중앙정렬 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 로고박스 */
+.logo{
+/* 부모자격 */
+    position: relative;
+}
+/* 로고이미지 */
+.logo img{
+    height: 100px;
+}
+/* 로고글자 - 앱솔루트로! */
+.logo span{
+    position: absolute;
+    /* 부모는? .logo */
+    bottom: 20px;
+    left: 30px;
+
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.1;
+    /* 글자그림자 : tsh */
+    text-shadow: 2px 2px 4px aquamarine;
+}
+
+/* 메뉴박스 */
+.nav-menu ul{
+    /* 플렉스박스 */
+    display: flex;
+    /* 메뉴간 간격 - gap */
+    gap: 30px;
+}
+/* 메뉴링크 */
+.nav-menu a {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* 링크 오버시 */
+.nav-menu a:hover {
+    color: aqua;
+}
+/************ 2. 하단영역 ************/
+/* 겉박스 */
+#bottom-area{
+    background-color: #01440091;
+}
+/* 속박스 */
+.bottom-area{
+    /* 그리드 */
+display: grid;
+/* 그리드 간격 (아래 위 줄간격,양옆 열간격) */
+grid-gap: 20px 40px;
+/* 그리드 템플릿 컬럼 설정 */
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+/* 첫번째 값으로 repeat값으로 auto-fit을 쓰면 자동맞춤
+두번쩨 값으로 minmax(값1,값2) 크기의 최소는 값1, 최소는 값2
+-> 여기서 최대값은 1fr (=등분할자동) */
+
+/* 
+grid-template-columns: repeat(4, 1fr);
+-> 한줄에 3개씩 각각 200px 가로크기 셋팅
+grid-template-columns: repeat(3, 200px); 
+-> 한줄에 4개씩 모두 등분할 (1:1:1:1)
+*/
+
+color: #fff;
+padding: 40px 20px;
+/* 박스중앙 */
+max-width: 1200px;
+margin: 0 auto;
+
+}
+/* 하단 모든 링크 */
+.bottom-area a {
+  color: #ccc;
+}
+/* 하단링크 오버 시 */
+.bottom-area a:hover {
+  color: #00ffff;
+}
+
+/* 회사 정보 */
+.company-info p {
+  margin: 8px 0;
+}
+
+/* 빠른 링크, 법적 정보, 팔로우 영역 공통 스타일 */
+.quick-links ul,
+.legal ul,
+.follow-us ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 뉴스레터 영역 */
+.newsletter p {
+  margin-bottom: 10px;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.newsletter input[type="email"] {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+}
+
+.newsletter button {
+  padding: 8px 16px;
+  background-color: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #00cccc;
+}
