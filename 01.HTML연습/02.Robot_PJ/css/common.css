@@ -44,12 +44,27 @@
     /* 부모는? .logo */
     bottom: 20px;
     left: 30px;
+    /* 트랜스폼되는 로봇 이미지가 위로 올라오는 특성때문에 z-index로 위로 올라오게끔 한다 */
+    z-index: 1;
 
     font-size: 24px;
     text-align: center;
     line-height: 1.1;
     /* 글자그림자 : tsh */
     text-shadow: 2px 2px 4px aquamarine;
+}
+/* 로고 글자 span 박스에 오버시 다음 형제인 img위치로 이동하기 (트랜스폼의 트랜스레이트 x축 사용)*/
+.logo span:hover + img{
+/* X축 자기의 가로크기만큼 오른쪽 이동 150%만큼 */
+    transform: translateX(150%);
+    /* translate 속성 사용시 x 축만 움직이려면 값을 하나만 쓰고 y축이동은 띄어쓰기로 뒤에 써준다
+  y축만 이동하고 싶으면 앞에 0 을 쓰고 뒤에 값을 쓴다 */
+/*   transform: translate(150%,0);*/
+
+/* 트랜지션- transition : 속시이지 (속성,시간,이징, 지연시간)
+속성값을 안쓰거나 all을 쓰면 모든 속성이 동일하게 적용됨*/
+/* transition: 1.5s;*/
+transition: 1.5s ease-in-out;
 }
 
 /* 메뉴박스 */

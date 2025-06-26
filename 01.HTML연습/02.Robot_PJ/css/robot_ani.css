@@ -1,3 +1,41 @@
 @charset "utf-8";
 /* 로봇 PJ 애니메이션 - 키프레임, 호출구현 : robot_ani.css */
 
+/* 오른쪽 팔 (arm2)에 적용하기 */
+.arm2{
+    /* 트랜스폼 축 변경하기
+    원래는 정중앙 축이지만 변경가능함 transform-origin: 가로축 세로축 */
+    transform-origin: top;
+    /* 애니메이션 호출 animation:이시이지반방마*/
+/* animation: name duration timing-function delay iteration-count direction fill-mode;
+ */
+animation: lift-up-ani .5s cubic-bezier(0.76, 0, 0.23, 0.98) 2s forwards;
+}
+
+/* 팔 올리기 keyframe */
+@keyframes lift-up-ani {
+    /* (처음상태가 from 과 같다면 ) 0deg라는건 생략 가능 */
+ /*  from {
+    rotate: 0deg;
+  } */
+  to {
+    rotate: -130deg;
+  }
+}
+/* 아랫쪽 팔 애니 적용하기 */
+.arm2 span{
+  transform-origin: top;
+  /* 애니메이션 호출 */
+animation: shake-arm-ani 1s ease-in-out 2.5s infinite alternate;
+/* 위 애니 해석 : 2.5s 후 0.4초간 ease 가속도로 무한으로 (infinite) 양방향애니 (alternate) */
+}
+
+/* 팔 흔들기 키프레임 */
+@keyframes shake-arm-ani {
+/* to{
+  rotate: -40deg;
+} */
+  100%{
+    rotate: -40deg;
+  }
+}
